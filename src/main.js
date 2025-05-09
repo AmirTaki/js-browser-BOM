@@ -1,80 +1,45 @@
-document.getElementById("text").innerHTML = "method 'window' BOM ?"
-
-
-window.alert("your Wellcome")
-
-window.open("http://google.com", "google", "width=200, height=200")
-
-let myWin = window.open("http://google.com", "google", "width=200, height=200")
-
-myWin // ابحکت ویندور مربوط به صفحه جدید
-
-// focus()
-myWin.focus()
-
-// close
-
-// myWin.close()
-
-// window.close()
-
-console.log(myWin.closed)
-
-myWin.opener
-
-// confirm
-
-window.confirm("prees ok to continue")  //بازکردن یک پنجره در مرور گر
-
-// print
-window.print()
-
-//  prompt 
-window.prompt("enter your name ")
-
-
-//  stop load  page 
-window.stop()
-
-
-// setinterval
-
-let myintervale = setInterval(()=>{
-    console.log('interval')
-}, 3000)
-
-// set time out
-
-
-let myTimeout = setTimeout(()=>{
-    console.log('setTimeout')
-}, 5000)
+document.getElementById("text").innerHTML = " property 'loaction' BOM "
 
 
 
-// clear interval
+// url : Protocol , ip (domain) , Port , Path
+/*
+http://127.0.0.1:5500/index.html
+Protocol : لایه اپلیکیشن شبکه => http
+ip : addres server =? 127.0.0.1
+port : 5500
+path :index.html  نمایش کدام صفخه در وب
 
-window.clearInterval(myintervale)
+*/
+
+window.location
+
+window.location.hostname // ip or domain name
+
+window.location.protocol // protocol
+
+window.location.port   // port
+
+window.location.pathname   // name web page 
+
+window.location.hash  // bookmark html ->   #about اسامی قسمتی از صفحات که در انجاییم
+// link http://127.0.0.1:5500/index.html#about 
+
+window.location.search  // search in url نمایش
+
+window.location.href  // url full
+
+window.location.host    // id/admin + port
+
+window.location.origin // protocol + id/admin + port
 
 
-// clear timeout
-window.clearTimeout(myTimeout)
-
-// scrool 
-window.scroll(100, 200)
-window.scrollTo(100, 200)
 
 
-// innerHeight
-window.innerHeight
+window.location.assign("")  // go to page 
 
-// innerWidth
-window.innerWidth
+window.location = "";
 
-// media Qury -> object media Qury list
+window.location.reload // refresh page
 
-window.matchMedia("(width:825px)").matches  // true || false
-
-
-window.matchMedia("(max-width:825px)").matches
-
+window.replace("") // go to page not back 
