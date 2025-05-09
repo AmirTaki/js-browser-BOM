@@ -1,45 +1,67 @@
-document.getElementById("text").innerHTML = "What BOM ?"
-// browser object model
-// BOM == WINDOW == GLOBAL OBJECT
+document.getElementById("text").innerHTML = "Property 'console' BOM ?"
 
-/* 
 
-*/
-console.log(window)
+window.console
 
-console.log(window.innerHeight)  /// ارتفاع تب مرورگر
+// log - print
+window.console.log("log - print")
 
-window.alert("hi js")  //  بازکردن پنحره در مرورگر
+// error
+window.console.error("erorr")
 
-window.x = 5;
+//warning
+window.console.warn("warning") 
 
-console.log(window.x)
+//info
+window.console.info("info")
 
-x = 4;
+// window.console.clear()   -> clear 
 
-console.log(x)
+// table
+let obj = {name : "amir", admin : 'true'}
 
-var z = 12;
+window.console.table(obj)
 
-console.log(window.z)
+let arr = [11, 12, 13, 14, 15, 16]
 
-function greet() {console.log("BOM javaScript")}
+window.console.table(arr)
 
-window.greet()
+// count
+window.console.count("javaScript")
+window.console.count("javaScript")
+window.console.count("javaScript")
 
-window.console.log
-/*
- کلمه کلیدی this 
-به طور پیش فرض به ابجکت 
-window
-اشاره میکند
-*/
 
-console.log(this)
+let value = 0 ;
+function sum() {
+    for (let i = 0; i < 100000; i++){
+        value += i;
+    }
+}
 
-console.log(this === window)
+// time
+console.time()
+sum()
+console.timeEnd()
 
-console.log(window.window)
+// lenght
+window.length  // تعداد تگ های ای فریم صفحه برمیگرداند
 
-console.log(window.window.window)
+// closed
+window.closed  // بستن پنجره تب
 
+// navigator   
+window.navigator  // اطلاعات درمورد مرورگر کاربر
+
+window.pageXOffset  // میزان اسکرول عمودی صفحه مرورگر
+
+window.pageXOffset  // میزان اسکرول افقی صفحه مرورگر
+
+// screen
+window.screenX       // فاصله برنامه مرورگر از سمت چپ صفحه
+
+window.screenLeft       // فاصله برنامه مرورگر از سمت چپ صفحه
+
+window.screenY      // فاصله برنامه مرورگر از سمت بالای صفحه
+
+window.screenTop        // فاصله برنامه مرورگر از سمت بالای صفحه
