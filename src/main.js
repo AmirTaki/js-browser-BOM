@@ -1,26 +1,45 @@
-document.getElementById("text").innerHTML = "folder Organiztion"
+document.getElementById("text").innerHTML = "What BOM ?"
+// browser object model
+// BOM == WINDOW == GLOBAL OBJECT
 
-let a = 2;
-let b = 7;
-let c = 12;
+/* 
 
-console.log(a, b, c)
-/*
-تمام جاوااسکریپت (ساختمان داده آن) بر اساس ابجکت نوشته شده است
 */
-let arr = new Array(1, 2, 3, 4, 5, -1, -2)
+console.log(window)
 
-/* property object*/
+console.log(window.innerHeight)  /// ارتفاع تب مرورگر
 
-console.log(arr.length)
+window.alert("hi js")  //  بازکردن پنحره در مرورگر
 
-console.log(arr.pop())
+window.x = 5;
 
-console.log(arr)
+console.log(window.x)
 
+x = 4;
+
+console.log(x)
+
+var z = 12;
+
+console.log(window.z)
+
+function greet() {console.log("BOM javaScript")}
+
+window.greet()
+
+window.console.log
 /*
-هرآبحکت توسط یک کلاس به وجود می آید
-هر آبجکت کلاس مربوط به خود را دارد
-وهر ابجکت یک سری پراپرتی دارد که نقش داده داردو 
-هر متد که نقش اکشن دارد
+ کلمه کلیدی this 
+به طور پیش فرض به ابجکت 
+window
+اشاره میکند
 */
+
+console.log(this)
+
+console.log(this === window)
+
+console.log(window.window)
+
+console.log(window.window.window)
+
