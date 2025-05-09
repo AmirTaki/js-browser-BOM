@@ -1,67 +1,80 @@
-document.getElementById("text").innerHTML = "Property 'console' BOM ?"
+document.getElementById("text").innerHTML = "method 'window' BOM ?"
 
 
-window.console
+window.alert("your Wellcome")
 
-// log - print
-window.console.log("log - print")
+window.open("http://google.com", "google", "width=200, height=200")
 
-// error
-window.console.error("erorr")
+let myWin = window.open("http://google.com", "google", "width=200, height=200")
 
-//warning
-window.console.warn("warning") 
+myWin // ابحکت ویندور مربوط به صفحه جدید
 
-//info
-window.console.info("info")
+// focus()
+myWin.focus()
 
-// window.console.clear()   -> clear 
+// close
 
-// table
-let obj = {name : "amir", admin : 'true'}
+// myWin.close()
 
-window.console.table(obj)
+// window.close()
 
-let arr = [11, 12, 13, 14, 15, 16]
+console.log(myWin.closed)
 
-window.console.table(arr)
+myWin.opener
 
-// count
-window.console.count("javaScript")
-window.console.count("javaScript")
-window.console.count("javaScript")
+// confirm
+
+window.confirm("prees ok to continue")  //بازکردن یک پنجره در مرور گر
+
+// print
+window.print()
+
+//  prompt 
+window.prompt("enter your name ")
 
 
-let value = 0 ;
-function sum() {
-    for (let i = 0; i < 100000; i++){
-        value += i;
-    }
-}
+//  stop load  page 
+window.stop()
 
-// time
-console.time()
-sum()
-console.timeEnd()
 
-// lenght
-window.length  // تعداد تگ های ای فریم صفحه برمیگرداند
+// setinterval
 
-// closed
-window.closed  // بستن پنجره تب
+let myintervale = setInterval(()=>{
+    console.log('interval')
+}, 3000)
 
-// navigator   
-window.navigator  // اطلاعات درمورد مرورگر کاربر
+// set time out
 
-window.pageXOffset  // میزان اسکرول عمودی صفحه مرورگر
 
-window.pageXOffset  // میزان اسکرول افقی صفحه مرورگر
+let myTimeout = setTimeout(()=>{
+    console.log('setTimeout')
+}, 5000)
 
-// screen
-window.screenX       // فاصله برنامه مرورگر از سمت چپ صفحه
 
-window.screenLeft       // فاصله برنامه مرورگر از سمت چپ صفحه
 
-window.screenY      // فاصله برنامه مرورگر از سمت بالای صفحه
+// clear interval
 
-window.screenTop        // فاصله برنامه مرورگر از سمت بالای صفحه
+window.clearInterval(myintervale)
+
+
+// clear timeout
+window.clearTimeout(myTimeout)
+
+// scrool 
+window.scroll(100, 200)
+window.scrollTo(100, 200)
+
+
+// innerHeight
+window.innerHeight
+
+// innerWidth
+window.innerWidth
+
+// media Qury -> object media Qury list
+
+window.matchMedia("(width:825px)").matches  // true || false
+
+
+window.matchMedia("(max-width:825px)").matches
+
