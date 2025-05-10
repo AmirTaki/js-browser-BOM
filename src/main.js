@@ -1,15 +1,8 @@
 document.getElementById("text").innerHTML = " property 'history' BOM "
 
+window.history.state  // تغییر آدرس مرورگر بدون رفرش نمایش
 
-window.history
+window.history.pushState({id : 1}, "course", "")  // اضافه کردن استیت به هیستوری
 
-window.history.length  // تغداد تاریخچه تب
-
-window.history.back() // برگشت 
-
-window.history.forward()  // جلو
-
-window.history.go(-1) // یک صفحه به عفب
-
-
+window.history.go(-1)  // خارج کردن استیت از  پشته
 
