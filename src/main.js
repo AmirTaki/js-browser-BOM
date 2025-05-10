@@ -1,15 +1,14 @@
-document.getElementById("text").innerHTML = " Session Storage  : storage in browser : BOM "
+document.getElementById("text").innerHTML = " gio location : Geographical location : BOM"
 
-// Session Stroage : 5 MB == > NOT EXPIRED 
 
-window.sessionStorage;   // ذخیره محدود فقط در همان تب
+// Geographical Location => GPS
 
-// Expired : close tab
+window.navigator.geolocation.getCurrentPosition()
 
-window.sessionStorage.setItem("name" = "amir")
+window.navigator.geolocation.getCurrentPosition((p)=>{
+ console.log(`${p.coords.latitude}, ${p.coords.longitude}`)
+})
 
-window.sessionStorage.get("name")
 
-window.sessionStorage.removeItem("name")
 
-window.sessionStorage.clear()
+// service =>  mapbox.com => create account
