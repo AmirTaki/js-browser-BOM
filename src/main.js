@@ -1,8 +1,30 @@
-document.getElementById("text").innerHTML = " property 'history' BOM "
+document.getElementById("text").innerHTML = " property 'screen' BOM "
 
-window.history.state  // تغییر آدرس مرورگر بدون رفرش نمایش
+//  screen : size
 
-window.history.pushState({id : 1}, "course", "")  // اضافه کردن استیت به هیستوری
+window.innerHeight;     // ارتفاع تب مرورگر
 
-window.history.go(-1)  // خارج کردن استیت از  پشته
+window.innerWidth;      // عرق تب مرورگر
 
+window.outerHeight      // ارتفاع مرورگر
+
+window.outerWidth        // عرض مرورگر
+
+// sccreen : سایز صفحه نمایش کاریر
+
+window.screen;
+
+window.screen.width;        // عرض صفحه نمایش
+
+window.screen.height;       // ارتفاغ صفحه نمایش
+
+window.screen.availWidth    //  در اختیار داشتن عرض صفحه نمایش
+
+window.screen.availHeight    //  در اختیار داشتن ارتفاع صفحه نمایش
+
+window.screen.orientation.type // عمودی یا افقی بودن صفحه نمایش کاربر
+
+// 'landscape-primary'  : صفحه افقی ->  labtop
+// 'portrait-primary'   : صفحه عمودی -> mobile
+// 'portrait-secondary' : صفحه عمودی برعکس-> mobile
+//  'landscape-secondary' : صفحه افقی -> mobile 
