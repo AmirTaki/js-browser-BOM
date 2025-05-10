@@ -1,17 +1,15 @@
-document.getElementById("text").innerHTML = " Local Storage  : storage in browser : BOM "
+document.getElementById("text").innerHTML = " Session Storage  : storage in browser : BOM "
 
-// Local Stroage : 10 MB == > NOT EXPIRED 
+// Session Stroage : 5 MB == > NOT EXPIRED 
 
-window.localStorage   // local storge
+window.sessionStorage;   // ذخیره محدود فقط در همان تب
 
-window.localStorage.setItem("name", "amir")
+// Expired : close tab
 
-window.localStorage.setItem("age", "28")  // set item
+window.sessionStorage.setItem("name" = "amir")
 
-window.localStorage.getItem("name")
+window.sessionStorage.get("name")
 
-window.localStorage.getItem("age") // view item
+window.sessionStorage.removeItem("name")
 
-window.localStorage.removeItem("name")   // remove
-
-window.localStorage.clear  // حدف همه آیتم ها
+window.sessionStorage.clear()
