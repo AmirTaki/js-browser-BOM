@@ -1,21 +1,17 @@
-document.getElementById("text").innerHTML = " Cookie  : storage in browser : BOM "
+document.getElementById("text").innerHTML = " Local Storage  : storage in browser : BOM "
 
+// Local Stroage : 10 MB == > NOT EXPIRED 
 
+window.localStorage   // local storge
 
-// Cookie
+window.localStorage.setItem("name", "amir")
 
-window.document
+window.localStorage.setItem("age", "28")  // set item
 
-window.document.cookie
+window.localStorage.getItem("name")
 
-window.document.cookie = "Product_name = ball;"  // ذخیره کوکی 
+window.localStorage.getItem("age") // view item
 
-window.document.cookie = "name = amir; max-age = 5" // ذخیره کوکی با تاریخ انقضا
+window.localStorage.removeItem("name")   // remove
 
-new Date("2025/1/1").toUTCString()  
-
-// / ذخیره کوکی با تاریخ انقضا
-window.document.cookie = "name = mani ; expires = Tue, 31 Dec 2024 20:30:00 GMT"
-
-// حذف کوکی با تاریخی در گذشته
-window.document.cookie = "name = mani ; expires = Tue, 31 Dec 1990 20:30:00 GMT"
+window.localStorage.clear  // حدف همه آیتم ها
